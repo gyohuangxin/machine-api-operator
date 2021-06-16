@@ -94,7 +94,7 @@ func getProviderControllerFromImages(platform configv1.PlatformType, images Imag
 	case kubemarkPlatform:
 		return clusterAPIControllerKubemark, nil
 	default:
-		return clusterAPIControllerNoOp, nil
+		return images.ClusterAPIControllerOpenStack, nil
 	}
 }
 
